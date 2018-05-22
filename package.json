@@ -1,0 +1,23 @@
+{
+  "name": "indecision_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oromar/ReactCompleteCourse.git"
+  },
+  "author": "oldm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oromar/ReactCompleteCourse/issues"
+  },
+  "homepage": "https://github.com/oromar/ReactCompleteCourse#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1"
+  }
+}
