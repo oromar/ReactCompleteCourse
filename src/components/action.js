@@ -5,7 +5,7 @@ import React from 'react'
       const { onClick, children, disabled } = this.props
       return (
         <div>
-          <button disabled={disabled} onClick={onClick}>{children}</button>
+          <button className="big-button" disabled={disabled} onClick={onClick}>{children}</button>
         </div>
       )
     }

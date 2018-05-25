@@ -2,14 +2,14 @@ import React from 'react'
 
 class Option extends React.Component {
     render () {
-      const { children, onClick } = this.props
+      const { count, children, onClick } = this.props
       return (
-        <div>
-            {children}
-            <button
+        <div className='option'>
+            <p className='option__text'>{`${count}. ${children}`}</p>
+            <button 
               key={children}
               onClick={(e) => onClick(children)}
-              style={{ border: 'none', background: 'none' }}
+              className='button button--link'
             >
               Remove
             </button>        

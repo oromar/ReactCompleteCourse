@@ -6,12 +6,13 @@ class Options extends React.Component {
       const { options, onClick, onOptionRemove } = this.props
       return (
         <div>
-          <div>
-            <h3>Your Options</h3>
-            <button onClick={onClick}>Remove All</button>
+          <div className='widget-header'>
+            <h3 className='widget-header__title'>Your Options</h3>
+            <button className='button button--link' onClick={onClick}>Remove All</button>
           </div>
+          {options.length === 0 && <p className='widget widget-message'>Please add an option to get started!</p>}
             {options.map((opt, i) => (
-              <Option onClick={onOptionRemove} key={i}>{opt}</Option>
+              <Option onClick={onOptionRemove} count={i + 1} key={i}>{opt}</Option>
             ))}
         </div>
       )
