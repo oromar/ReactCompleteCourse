@@ -23,7 +23,10 @@ export default class ExpenseForm extends React.Component {
 
     onAmountChange(e) {
         const amount = e.target.value
-        this.setState(({amount}))
+        const regex = /^\d*(\.\d{0,2})?$/
+        if (amount.match(regex)) {
+            this.setState(({amount}))
+        }
     }
 
     onNoteChange(e) {
@@ -46,7 +49,7 @@ export default class ExpenseForm extends React.Component {
                         </div>
                         <div>
                             <input 
-                                type="number" 
+                                type="text" 
                                 placeholder="Amount"
                                 value={this.state.amount}
                                 onChange={this.onAmountChange}
