@@ -3,8 +3,8 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom'
 import {Header} from '../components/header'
 import {NotFoundPage} from '../components/not-found'
 import {HelpPage} from '../components/help'
-import {EditExpensePage} from '../components/edit'
-import {CreateExpensePage} from '../components/create'
+import EditExpensePage from '../components/edit'
+import CreateExpensePage from '../components/create'
 import {ExpanseDashboardPage} from '../components/dashboard'
 
 const AppRouter = () => (

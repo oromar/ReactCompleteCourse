@@ -11,10 +11,6 @@ import './styles/styles.scss'
   
 const store = configureStore()
 
-store.dispatch(addExpense({description: 'Water bill', amount: 4500, createdAt: 10000}))
-store.dispatch(addExpense({description: 'Gas bill', amount: 1000, createdAt: 12000}))
-store.dispatch(addExpense({description: 'Rent', amount: 3800, createdAt: 1000}))
-
 const app = document.getElementById('app')
 
 const jsx = (
