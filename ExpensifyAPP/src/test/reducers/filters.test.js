@@ -20,3 +20,4 @@ test('should set sortBy date', () => {
     const state = filtersReducer(undefined, {type:'SORT_BY_DATE'})
     expect(state.sortBy).toBe('date')
 })
+
