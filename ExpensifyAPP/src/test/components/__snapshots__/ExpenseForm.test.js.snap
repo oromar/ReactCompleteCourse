@@ -260,6 +260,7 @@ ShallowWrapper {
         "createdAt": 1995-12-17T06:24:00.000Z,
         "description": "rent",
         "id": 1,
+        "note": "",
       }
     }
   />,
