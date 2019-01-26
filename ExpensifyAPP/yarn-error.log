@@ -1,0 +1,87 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add enzyme-json@3.0.1
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/c/Program Files/Docker/Docker/resources/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_2918734:/c/Windows/System32:/c/Windows:/c/Windows/System32/wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/c/Program Files/Microsoft SQL Server/110/Tools/Binn:/c/Program Files (x86)/Microsoft SDKs/TypeScript/1.0:/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/c/Program Files/PuTTY:/c/Program Files/Git/cmd:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files (x86)/Microsoft SQL Server/Client SDK/ODBC/130/Tools/Binn:/c/Program Files (x86)/Microsoft SQL Server/140/Tools/Binn:/c/Program Files (x86)/Microsoft SQL Server/140/DTS/Binn:/c/Program Files (x86)/Microsoft SQL Server/140/Tools/Binn/ManagementStudio:/c/Users/oldm/AppData/Local/Microsoft/WindowsApps:/c/Users/oldm/AppData/Local/Programs/Fiddler:/c/Users/oldm/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/enzyme-json: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:61073:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:120166:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:121138:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:121060:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "expensify_app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "serve": "live-server public/",
+      "build": "webpack",
+      "dev-server": "webpack-dev-server ",
+      "test": "jest --config=jest.config.json"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/oromar/ReactCompleteCourse.git"
+    },
+    "author": "oldm",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/oromar/ReactCompleteCourse/issues"
+    },
+    "homepage": "https://github.com/oromar/ReactCompleteCourse#readme",
+    "dependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.25.0",
+      "babel-loader": "^7.1.1",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "^1.5.2",
+      "babel-preset-react": "^6.24.1",
+      "css-loader": "^0.28.4",
+      "live-server": "^1.2.0",
+      "moment": "^2.22.2",
+      "node-sass": "^4.9.0",
+      "normalize.css": "^8.0.0",
+      "react": "^16.0.0",
+      "react-addons-shallow-compare": "^15.6.2",
+      "react-dates": "^16.7.0",
+      "react-dom": "^16.0.0",
+      "react-modal": "^3.4.4",
+      "react-redux": "^5.0.7",
+      "react-router-dom": "^4.2.2",
+      "redux": "^3.7.1",
+      "sass-loader": "^7.0.1",
+      "style-loader": "^0.18.2",
+      "uuid": "^3.2.1",
+      "validator": "^8.0.0",
+      "webpack": "^3.1.0"
+    },
+    "devDependencies": {
+      "jest": "^23.1.0",
+      "webpack-dev-server": "^2.5.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -4,25 +4,34 @@ import ExpenseForm from './expense-form'
 import {editExpense} from '../actions/expenses'
 import {removeExpense} from '../actions/expenses'
 
-
-const EditExpensePage = (props) => {
-    return (
-    <div>
-        <h1>Edit Expense</h1>
-        <ExpenseForm 
-            expense={props.expense}
-            buttonLabel={"Edit Expense"}
-            onSubmit={(expense) => {
-                props.dispatch(editExpense({id: props.match.params.id, updates: expense}))
-                props.history.push('/')
-            }}            
-        />
-        <button onClick={() => {
-            props.dispatch(removeExpense({id: props.match.params.id}))
-            props.history.push('/')
-        }}>Remove</button>
-    </div>
-)}
+export class EditExpensePage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.onSubmit = this.onSubmit.bind(this)
+        this.onClick = this.onClick.bind(this)
+    }
+    onSubmit(id, expense) {
+        this.props.onSubmit(id, expense)
+        this.props.history.push('/')
+    }
+    onClick(id) {
+        this.props.onClick(id)
+        this.props.history.push('/')
+    }
+    render() {
+        return (
+            <div>
+                <h1>Edit Expense</h1>
+                <ExpenseForm 
+                    expense={this.props.expense}
+                    buttonLabel={"Edit Expense"}
+                    onSubmit={this.onSubmit}            
+                />
+                <button onClick={this.onClick}>Remove</button>
+            </div>
+        )
+    }
+}
 
 const mapStateToProps = (state, props) => {
     return {
@@ -30,4 +39,11 @@ const mapStateToProps = (state, props) => {
     }
 }
 
-export default connect(mapStateToProps)(EditExpensePage)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSubmit: ({id, expense}) => dispatch(editExpense({id, updates: expense})),
+        onClick: (id) => dispatch(removeExpense({id}))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage)

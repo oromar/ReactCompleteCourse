@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
-import {Header} from '../components/header'
+import Header from '../components/header'
 import {NotFoundPage} from '../components/not-found'
 import {HelpPage} from '../components/help'
 import EditExpensePage from '../components/edit'
@@ -23,3 +23,4 @@ const AppRouter = () => (
 )
 
 export default AppRouter
+    
